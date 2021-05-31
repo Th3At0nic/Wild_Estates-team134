@@ -2,7 +2,7 @@ import React from 'react';
 import './Footer.css';
 import FooterCol from '../FooterCol/FooterCol';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF, faInstagram, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
+import { faFacebookF, faGoogle, faInstagramSquare } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     const noNamed = [
@@ -45,8 +45,8 @@ const Footer = () => {
                     <FooterCol key={4} menuTitle="Our Address" menuItems={ourAddress}> 
                         <ul className="social-media list-inline">
                             <li className="list-inline-item"><a href="//facebook.com"><FontAwesomeIcon className="icon active-icon" icon={faFacebookF} /></a></li>
-                            <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGooglePlusG} /></a></li>
-                            <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" icon={faInstagram} /></a></li>
+                            <li className="list-inline-item"><a href="//google.com"><FontAwesomeIcon className="icon" icon={faGoogle} /></a></li>
+                            <li className="list-inline-item"><a href="//instagram.com"><FontAwesomeIcon className="icon" icon={faInstagramSquare} /></a></li>
                         </ul>
                         <div className="mt-5">
                             <h6>Call now</h6>

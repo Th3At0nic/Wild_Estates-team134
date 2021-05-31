@@ -1,6 +1,7 @@
 import React from 'react';
 
-const ServiceDetail = ({service}) => {
+const ServiceDetail = ({service,addToCart}) => {
+    console.log(addToCart);
 
     const { name, img } = service;
 
@@ -11,7 +12,7 @@ const ServiceDetail = ({service}) => {
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, quaerat</p>
-                <button type="button" className="btn btn-info">Take Service</button>
+                <button onClick={addToCart} type="button" className="btn btn-info">Take Service</button>
             </div>
         </div>
     </div>

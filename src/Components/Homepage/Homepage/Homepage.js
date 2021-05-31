@@ -1,18 +1,30 @@
 import React from 'react';
-import Footer from '../../ReUse/Footer/Footer';
+import { connect } from 'react-redux';
+import { addToCart } from '../../../redux/Action';
 import FeaturedService from '../FeaturedService/FeaturedService';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 
-const Homepage = () => {
+const Homepage = (props) => {
+    console.log(props);
     return (
         <div>
-            <Header></Header>
-            <Services></Services>
+            <Header cart= {props.cart}></Header>
+            <Services addToCart={ props.addToCart }></Services>
             <FeaturedService></FeaturedService>
-            {/* <Footer></Footer> */}
+             {/* <Footer></Footer>  */}
         </div>
     );
 };
+const mapStateToProps = (state) => {
+    return {
+        cart : state.cart
+    }
+}
+const mapDispatchToProps = 
+     {
+        addToCart: addToCart
+    }
 
-export default Homepage;
+
+export default connect(mapStateToProps, mapDispatchToProps)(Homepage);

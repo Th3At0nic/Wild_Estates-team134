@@ -2,13 +2,15 @@ import React from 'react';
 import logo from '../../../images/logo.png';
 import './Navbar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 
-const Navbar = () => {
+
+const Navbar = ({cart}) => {
+    console.log(cart);
     return (
         <nav className="navbar fixed-top navbar-expand-lg navbar-light bg-primary">
             <div className="container">
-                <a className="navbar-brand" href="#"> <img className="logo" src={logo} alt="" /></a>
+                <a className = "navbar-brand" href="#"> <img className="logo" src={logo} alt="" /></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <FontAwesomeIcon icon={faBars} style={{color: '#fff'}} />
                 </button>
@@ -18,16 +20,13 @@ const Navbar = () => {
                             <a className="nav-link active" aria-current="page" href="/">Home</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/about">about me</a>
+                            <a className="nav-link" href="/about">Dashboard</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/projects">project</a>
+                            <a className="nav-link" href="/projects">Login</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/blog">blog</a>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link" href="/contact">contact me</a>
+                            <h3 className="nav-link"style={{color: '#fff'}} ><FontAwesomeIcon icon={faCartPlus} style={{color: '#fff'}}> </FontAwesomeIcon>-{cart} </h3>
                         </li>
                     </ul>
                 </div>
@@ -35,5 +34,6 @@ const Navbar = () => {
         </nav>
     );
 };
+
 
 export default Navbar;
