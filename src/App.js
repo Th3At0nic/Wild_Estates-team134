@@ -1,12 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Homepage from './Components/Homepage/Homepage/Homepage';
 
 function App() {
-  return (
-    <div className="App">
-     <h2>This is wild estates,.hg yay</h2>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Homepage></Homepage>
+		</div>
+	);
 }
 
 export default App;
